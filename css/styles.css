@@ -9,4 +9,5 @@ body, header, nav, main, footer, h1, div, img, ul {
 
 header {
     color: #bd2121;
+    text-align: center;
 }
