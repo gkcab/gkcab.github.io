@@ -8,6 +8,146 @@ body, header, nav, main, footer, h1, div, img, ul {
 }
 
 header {
-    color: #bd2121;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+h1 {
+    color: #ffffff;
+    text-decoration: underline;
     text-align: center;
+}
+
+body {
+    background: linear-gradient(to bottom, #a71d1d, #5c0000);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Style rules for main content */
+footer {
+    margin: 20px;
+    padding: 10px;
+    clear: left;
+    border-radius: 10px;
+    background-color: #660606;
+}
+
+main {
+    background-color: #ffffff;
+    color: #333333;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.welcome {
+    background-color: #660606;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 40px;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+/* Style rules for Navigation Bar */
+nav {
+    background-color: #790a0a;
+    overflow: hidden;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    float: left;
+    width: 20%;
+}
+
+nav ul li a {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 8px;
+}
+
+nav ul li a:hover {
+    background-color: #ca0a0a;
+}
+
+/* Style rules for Game Cards */
+
+
+
+.game-container {
+    background-color: rgb(151, 62, 62);
+    padding: 20px;
+    display: grid;
+    gap: 50px;
+    margin: 20px auto;
+    max-width: 900px;
+}
+
+.card {
+    background-color: rgb(44, 18, 18);
+    display: flex;
+    max-width: 120px;
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 10px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+.card img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+
+
+/* Media Query for Mobile Viewport */
+@media screen and (max-width: 480px) {
+    nav ul li {
+        float: none;
+        width: 100%;
+    }
+
+    .game-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/*Media Query for Tablet Viewport*/
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    nav ul li {
+        float: left;
+        width: 50%;
+    }
+
+    .game-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Media Query for Desktop Viewport */
+@media screen and (min-width: 769px) {
+    nav ul li {
+        float: left;
+        width: 20%;
+    }
+
+    .game-container {
+        grid-template-columns: repeat(6, 1fr);
+    }
 }
